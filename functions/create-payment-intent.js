@@ -3,7 +3,7 @@
 //this is the package that helps us access env variables
 require("dotenv").config();
 
-const stripe = require("stripe")(`${process.env.REACT_APP_STRIPE_SECRET_KEY}`);
+const stripe = require("stripe")(process.env.REACT_APP_STRIPE_SECRET_KEY);
 exports.handler = async function (event, context) {
 
   if (event.body) {
